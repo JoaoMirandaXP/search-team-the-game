@@ -1,6 +1,5 @@
 # Search Team The Game
 
-
 -----
 
 
@@ -9,7 +8,6 @@
 * Coop
 * Ação
 * Luta
-
 
 
 -----
