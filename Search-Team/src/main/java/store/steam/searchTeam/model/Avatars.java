@@ -5,17 +5,15 @@ import store.steam.searchTeam.background.Background;
 //Classe mãe , meio q ela define oque todo personagem pode fazer no geral
 public class Avatars {
 	
-	private int playerPosition=0;
+	private static int playerPosition=0;
 	final int[] posicaoInicial1= {85,10};
 	final int[]posicaoInicial2= {175,10};
 	private int positionX;
 	private int positionY;
 	
-	
-	
 // 	OBS:consertar essa parte do if e do else if
 //	esse trecho faz com que o personagem inicie na posição certa
-//	if(this.playerPosition==1){
+//	if(this.playerPosition == 1){
 //		this.positionX = this.posicaoInicial1[0];
 //		this.positionY = this.posicaoInicial1[1];
 //	
@@ -25,6 +23,28 @@ public class Avatars {
 //		
 //	}
 	
+//	trocando esse if meio bugado que eu coloquei pelo construtor da classe
+	public Avatars() {
+		super();
+		this.playerPosition++;
+		if(this.playerPosition == 1) {
+			this.positionX = this.posicaoInicial1[0];
+			this.positionY = this.posicaoInicial1[1];
+		}else if(this.playerPosition == 2) {
+			this.positionX = this.posicaoInicial2[0];
+			this.positionY = this.posicaoInicial2[1];
+			
+		}else {
+			throw new IndexOutOfBoundsException("Você está inserindo um numero de player inválido");
+		}
+		System.out.println("Personagem "+ this.playerPosition +" instanciado com sucesso");
+	
+	
+	
+	
+	
+	
+	}
 	
 	
 	public void moveUP() {
